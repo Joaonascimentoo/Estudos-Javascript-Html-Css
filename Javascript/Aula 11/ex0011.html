@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalidade</title>
+</head>
+
+<body>
+    <h1>Digite o seu páis que você reside</h1>
+    <input type="text" name="paisRes" id="paisRes">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id='res'>
+
+    </div>
+    <script>
+        function verificar() {
+            var paisResidente = window.document.getElementById('paisRes')
+            var res = window.document.getElementById('res')
+
+            var vel = String(paisResidente.value)
+            res.innerText = `Vivendo em ${vel}`
+            if (vel == 'Brasil') {
+                res.innerHTML = 'Você é Brasileiro'
+            } else {
+                res.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+</body>
+
+</html>
